@@ -1,7 +1,7 @@
 <p>Choose an activity.</p>
 <ul>
   <li *ngFor="let activity of activities">
-    <a routerLink="/activity/{{ activity.id.value }}">
+    <a routerLink="/activity/{{ activity.id }}">
       {{ activity.name }}
     </a>
   </li>

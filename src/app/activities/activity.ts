@@ -1,10 +1,8 @@
-import ActivityId from './activityId';
-
 export default class Activity {
-  id: ActivityId;
+  id: number;
   name: string;
-  constructor(name: string) {
-    this.id = new ActivityId();
+  constructor(id: number, name: string) {
+    this.id = id;
     this.name = name;
   }
 }

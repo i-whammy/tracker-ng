@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import Activity from '../activities/activity';
 import { ActivityService } from '../activity.service';
 import { ActivatedRoute } from '@angular/router';
-import ActivityId from '../activities/activityId';
 
 @Component({
   selector: 'app-activity',
@@ -18,7 +17,7 @@ export class ActivityComponent implements OnInit {
   activity: Activity | undefined;
 
   ngOnInit(): void {
-    const id = this.route.snapshot.paramMap.get('id')!;
-    this.activity = this.activityService.getActivity(new ActivityId(id));
+    const id = +this.route.snapshot.paramMap.get('id')!;
+    this.activity = this.activityService.getActivity(id);
   }
 }
