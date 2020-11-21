@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import Activity from './activities/activity';
+import ActivityId from './activities/activityId';
 
 @Injectable({
   providedIn: 'root',
@@ -15,5 +16,13 @@ export class ActivityService {
 
   getActivities(): Activity[] {
     return this.MOCK_ACTIVITIES;
+  }
+
+  getActivity(id: ActivityId): Activity {
+    console.log(this.MOCK_ACTIVITIES);
+    console.log(id);
+    return this.MOCK_ACTIVITIES.find(
+      (activity) => activity.id.value == id.value
+    )!;
   }
 }

@@ -1,3 +1,8 @@
+<p>Choose an activity.</p>
 <ul>
-  <li *ngFor="let activity of activities">{{ activity.name }}</li>
+  <li *ngFor="let activity of activities">
+    <a routerLink="/activity/{{ activity.id.value }}">
+      {{ activity.name }}
+    </a>
+  </li>
 </ul>

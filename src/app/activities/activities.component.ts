@@ -12,10 +12,6 @@ export class ActivitiesComponent implements OnInit {
   activities: Activity[] = [];
 
   ngOnInit(): void {
-    this.activities = [
-      new Activity('英単語'),
-      new Activity('フランス語のテキスト'),
-      new Activity('競技プログラミング'),
-    ];
+    this.activities = this.activityService.getActivities();
   }
 }
