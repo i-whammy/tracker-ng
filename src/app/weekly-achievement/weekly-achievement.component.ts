@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DateService } from 'src/services/date.service';
 
 @Component({
   selector: 'app-weekly-achievement',
@@ -6,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./weekly-achievement.component.scss'],
 })
 export class WeeklyAchievementComponent implements OnInit {
-  constructor() {}
+  constructor(private dateService: DateService) {}
 
-  dates = [22, 23, 24, 25, 26, 27, 28];
+  dates: number[] = [];
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.dates = this.dateService
+      .getDatesOfWeek()
+      .map((date) => date.getDate());
+  }
 }

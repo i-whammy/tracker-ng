@@ -1,5 +1,5 @@
 import { TestBed } from '@angular/core/testing';
-import Activity from './activities/activity';
+import Activity from './activity';
 import { ActivityService } from './activity.service';
 
 describe('ActivityService', () => {
