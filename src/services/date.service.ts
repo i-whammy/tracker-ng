@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import DateFactory from './dateFactory';
+import DateFactory from './date-factory';
 
 @Injectable({
   providedIn: 'root',
