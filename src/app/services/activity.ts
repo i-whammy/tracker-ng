@@ -1,3 +1,5 @@
+import Achievement from './acheivement';
+
 export default class Activity {
   id: number;
   name: string;

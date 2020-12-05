@@ -1,4 +1,6 @@
 <div *ngIf="activity">
   <span>Title: {{ activity.name }}</span>
-  <app-weekly-achievement></app-weekly-achievement>
+  <app-weekly-achievement
+    [achievements]="achievements"
+  ></app-weekly-achievement>
 </div>
