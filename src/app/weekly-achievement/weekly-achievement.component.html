@@ -12,6 +12,15 @@
     <div *ngFor="let date of dates">{{ date }}</div>
   </div>
   <div class="achievements">
-    <div *ngFor="let achievement of achievements">{{ achievement.amount }}</div>
+    <div class="achievement" *ngFor="let achievement of achievements">
+      <div
+        class="achievement-circle"
+        [style.width.px]="toAchievementRadius(achievement.amount)"
+        [style.height.px]="toAchievementRadius(achievement.amount)"
+        [style.line-height.px]="toAchievementRadius(achievement.amount)"
+      >
+        {{ achievement.amount }}
+      </div>
+    </div>
   </div>
 </div>

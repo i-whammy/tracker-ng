@@ -17,16 +17,27 @@
     flex: 1 1 0;
     height: 20px;
     text-align: center;
+    padding: 32px 0;
   }
 }
 
 .achievements {
   display: flex;
+  justify-content: space-around;
+  align-items: center;
   margin-top: 40px;
 
-  div {
-    flex: 1 1 0;
-    height: 20px;
+  .achievement {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .achievement-circle {
+    display: block;
+    border-radius: 50%;
+    background-color: #72d372;
     text-align: center;
+    margin: auto;
   }
 }

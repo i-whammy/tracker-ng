@@ -17,6 +17,7 @@ export class WeeklyAchievementComponent implements OnInit {
   get achievements() {
     return this._achievements;
   }
+
   set achievements(achievements: Achievement[]) {
     this._achievements = achievements || [];
   }
@@ -25,5 +26,9 @@ export class WeeklyAchievementComponent implements OnInit {
     this.dates = this.dateService
       .getDatesOfWeek()
       .map((date) => date.getDate());
+  }
+
+  toAchievementRadius(value: number): number {
+    return value * 10;
   }
 }
