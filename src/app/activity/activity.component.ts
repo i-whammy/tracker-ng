@@ -23,6 +23,8 @@ export class ActivityComponent implements OnInit {
   ngOnInit(): void {
     const id = +this.route.snapshot.paramMap.get('id')!;
     this.activity = this.activityService.getActivity(id);
-    this.achievements = this.achievementService.getAchievements(id);
+    this.achievements = this.achievementService.getCurrentWeeklyAchievements(
+      id
+    );
   }
 }

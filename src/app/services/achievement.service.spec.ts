@@ -9,8 +9,4 @@ describe('AchievementService', () => {
     TestBed.configureTestingModule({});
     service = TestBed.inject(AchievementService);
   });
-
-  it('should return mock achievements', () => {
-    expect(service.getAchievements(1)).toBe(service.MOCK_ACHIEVEMENTS);
-  });
 });
